@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <script src="https://kit.fontawesome.com/c49f5046f2.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../dist/output.css">
+    <script src="../dist/bundle.js" defer></script>
+
+    <style>
+        body {
+            background-color: #1d1d1d;
+        }
+
+        .navbar {
+
+            width: 100%;
+            padding: 20px;
+            /* Reduced padding for better appearance */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* Added to vertically center the content */
+            background-color: #1d1d1d;
+            /* Added to match the body background color */
+            z-index: 1;
+            /* Added to ensure the navigation bar is on top of other elements */
+        }
+
+        .navbar a {
+            color: white;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .navbar .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .navbar .nav-links ul {
+            display: flex;
+            align-items: center;
+
+        }
+
+        .navbar .nav-links ul li a:hover {
+            color: orange;
+        }
+
+        .navbar .nav-links ul li {
+            margin: 0 25px;
+            list-style: none;
+            /* Added to remove default bullet points */
+        }
+
+        .navbar .nav-links ul.active li {
+            margin: 0 25px;
+        }
+
+        .navbar .nav-links ul li.active a {
+            color: white;
+            font-weight: 600;
+            background: orange;
+            padding: 10px 20px;
+            border-radius: 1.5rem;
+        }
+
+        /* Added styling for the section */
+        #content {
+            width: 100%;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: scroll;
+        }
+
+
+
+        .container>.popup {
+            width: 400px;
+            background: #fff;
+            border-radius: 6px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            padding: 0 30px 30px;
+            color: black;
+        }
+
+
+        .popup__img {
+
+            width: 100px;
+            margin-left: 120px;
+            margin-top: -50px;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 2;
+        }
+
+        .heading-2 {
+            color: black;
+            font-weight: bold;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 10px 40px;
+            background-color: #1d1d1d;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+            font-size: 22;
+            font-weight: 500;
+            border-radius: 30px;
+            color: wheat;
+        }
+    </style>
+</head>
+
+
+<body>
+    <nav class="navbar">
+        <a href="../index.html" class="logo">Cocktail Events</a>
+        <div class="nav-links">
+            <ul>
+                <li class="active"><a href="../index.html">Home</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <section id="content">
+        <div class="py-8 px-4 mx-auto max-w-2xl lg:py-16">
+            <form id="add">
+                <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
+
+                    <div class="w-full">
+                        <label for="fname" class="block mb-2 text-sm font-medium text-white">First
+                            Name</label>
+                        <input type="text" name="fname" id="first_name"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                            placeholder="John" required="">
+                    </div>
+                    <div class="w-full">
+                        <label for="lname" class="block mb-2 text-sm font-medium text-white">Last
+                            Name</label>
+                        <input type="text" name="lname" id="last_name"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                            placeholder="Doe" required="">
+                    </div>
+                    <div class="sm:col-span-2">
+                        <label for="email" class="block mb-2 text-sm font-medium text-white">
+                            Email</label>
+                        <input type="email" name="email" id="email"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                            placeholder="name@email.com" required="">
+                    </div>
+                    <div>
+                        <label for="number_of_people" class="block mb-2 text-sm font-medium text-white">No.
+                            Of Atendees</label>
+                        <input value="1" min="1" max="5" type="number" name="num_people" id="visitors"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                            placeholder="example : 1" required>
+
+                    </div>
+                    <div>
+                        <label for="phone" class="block mb-2 text-sm font-medium text-white">
+                            Phone Number</label>
+                        <input minlength="9" maxlength="10" type="tel" name="ph_number" id="ph_name"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                            placeholder="example: 0y498278374" required="">
+                    </div>
+                    <!-- captacha block-->
+                    <div class="sm:col-span-2">
+                        <div class="flex justify-center">
+                            <div class="g-recaptcha" data-sitekey="6Lc5q_EmAAAAAI9u_ZN0chlG8-KMZhgXd0F4gkEs"></div>
+                        </div>
+
+                        <div class="sm:col-span-2 flex justify-center">
+                            <button type="submit" id="submitBtn"
+                                class="w-32 text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-lg my-5 py-1 mb-2 ">Book
+                                Now</button>
+                        </div>
+            </form>
+        </div>
+    </section>
+    <div class="container">
+        <div id="thank-you" class="hidden popup">
+            <img src="img/404-tick.png" alt="checked" class="popup__img">
+            <h2 class="heading-2">Thank you! Your booking has been submitted.
+            </h2>
+            <h1>You will receive an email in about 10-20 minutes as a confirmation.<br>
+                Please wait 10 seconds .......
+            </h1>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

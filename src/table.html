@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+
+    <link rel="stylesheet" href="../dist/output.css">
+    <script src="../dist/bundle.js" defer></script>
+
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 8px 12px;
+            text-align: left;
+        }
+
+        th {
+            font-weight: bold;
+        }
+
+        @media screen and (max-width: 640px) {
+            table {
+                font-size: 12px;
+                overflow-x: auto;
+                display: block;
+            }
+
+            th,
+            td {
+                padding: 6px 8px;
+                white-space: nowrap;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            table {
+                font-size: 10px;
+            }
+        }
+
+        .highlight {
+            background-color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <!--  NAV -->
+
+    <nav class="bg-white w-full z-20 top-0 left-0 border-b border-gray-200">
+        <div class="max-w-screen-xl flex justify-between items-center mx-auto p-4">
+            <div class="flex items-center">
+                <a href="../index.html" class="flex items-center">
+                    <img src="../src/img/cocktail-drink-svgrepo-com.svg" class="h-8 mr-3" alt="Flowbite Logo">
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap">Cocktail</span>
+                </a>
+            </div>
+
+            <div>
+                <button id="logged_in" type="button"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0">
+                    <a href="../index.html"><i class="fa-solid fa-house"></i> Home</a>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!--- TABLE-->
+    <section class="bg-gray-50 dark:bg-gray-900 p-3 sm:p-5">
+        <div class="mx-auto max-w-screen-xl px-4 lg:px-12">
+            <div class="bg-white dark:bg-gray-800 relative  overflow-hidden">
+                <div class="flex flex-col  items-center justify-between  p-4">
+                    <form class="flex items-center">
+                        <label for="simple-search" class="sr-only">Search</label>
+
+                        <input autocomplete="off" type="search" id="simple-search"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                            placeholder="Search">
+
+                    </form>
+                </div>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                        <tr>
+                            <th scope="col" class="px-4 py-3">First Name</th>
+                            <th scope="col" class="px-4 py-3">Last Name</th>
+                            <th scope="col" class="px-4 py-3">No. of People Booked</th>
+                            <th scope="col" class="px-4 py-3">Email</th>
+                            <th scope="col" class="px-4 py-3">Ph No.</th>
+                            <th scope="col" class="px-4 py-3">Booked Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

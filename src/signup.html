@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <script src="https://kit.fontawesome.com/c49f5046f2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../dist/output.css">
+    <script defer src="../dist/bundle.js"></script>
+
+    <style>
+        html {
+            height: 100%;
+            background-color: #1d1d1d;
+
+        }
+
+
+        body {
+
+            background: #f3f4f4;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-family: sans-serif;
+            background-color: #1d1d1d;
+
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .btn button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: white;
+            padding: 0;
+        }
+
+        .btn button a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 1.5rem;
+            background-color: orange;
+            font-weight: 600;
+        }
+
+        .btn button a:hover {
+            color: white;
+            background-color: #ff8500;
+        }
+
+
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
+
+        .box {
+
+            background: #f3f4f4;
+            border-radius: .625rem;
+            box-shadow: 0 0 40px 0;
+            display: flex;
+            flex-direction: column;
+            height: 31.25rem;
+            position: absolute;
+            width: 18.75rem;
+            align-items: center;
+
+        }
+
+
+
+        .logo {
+            height: 3.125rem;
+            margin-top: 1.875rem;
+            width: 3.125rem;
+        }
+
+        p {
+            color: #444;
+        }
+
+        .signin {
+            padding: .17rem;
+            font: 600 1.8rem sans-serif;
+        }
+
+        .signin-row {
+            display: flex;
+            justify-content: space-around;
+            margin: .625rem auto .3rem;
+            padding: .625rem;
+            width: 11rem;
+        }
+
+        .signin-row>i {
+            color: #444;
+            font-size: 2rem;
+            transition: all .15s ease-out;
+            -webkit-transition: all .15s ease-out;
+        }
+
+        .signin-text {
+            color: #9da3a5;
+            font: 500 .85rem;
+            margin: 0;
+            padding-top: 0.625rem;
+            text-align: center;
+
+        }
+
+
+        i {
+            background-color: #f2f2f2;
+            color: #1870c7;
+            padding: 10px;
+            border-radius: 2px;
+            width: 3em;
+        }
+
+
+
+
+        .continue-with-google {
+            background-color: #3f7ee8;
+            border: 5px solid #ddd;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 15rem;
+            padding-right: 5px;
+
+
+        }
+
+        .continue-with-google:hover {
+            background-color: #eee;
+            color: #3f7ee8;
+        }
+
+        .continue-with-google:focus {
+            outline: none;
+            box-shadow: 0 0 3px 3px rgba(66, 133, 244, 0.3);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="btn">
+        <button><a href="../index.html">Home</a></button>
+    </div>
+    <main>
+        <div class="box" id="login-form">
+            <p class="signin">Sign In</p>
+            <div id="gmailLogin" class="continue-with-google">
+                <i class="ic2 fab fa-google"></i>
+                <button>Continue with Google
+                </button>
+            </div>
+
+
+
+        </div>
+
+    </main>
+</body>
+<script>
+
+</script>
+
+</html>
