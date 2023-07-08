@@ -17,7 +17,7 @@ import {
 
 const firebaseConfig = {
   apiKey: "AIzaSyBeKGUZwCOGLll9faEktxJ33_L1gpauUV8",
-  authDomain: "auth-firebase-try.netlify.app",
+  authDomain: "book-event-4e4c4.firebaseapp.com",
   projectId: "book-event-4e4c4",
   storageBucket: "book-event-4e4c4.appspot.com",
   messagingSenderId: "79063146007",
